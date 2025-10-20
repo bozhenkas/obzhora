@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="dataSourceStorageLocal" created-in="PY-241.15989.155">
-    <data-source name="db" uuid="0aadeea3-1d49-476b-bc78-05e5e8ddb2ba">
+  <component name="dataSourceStorageLocal" created-in="PY-243.22562.220">
+    <data-source name="obzhora_db" uuid="e5cd0654-ada9-4b29-82a0-5dac42ff6a24">
       <database-info product="SQLite" version="3.43.0" jdbc-version="4.2" driver-name="SQLite JDBC" driver-version="3.43.0.0" dbms="SQLITE" exact-version="3.43.0" exact-driver-version="3.43">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>

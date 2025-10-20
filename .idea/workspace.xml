@@ -5,7 +5,85 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4759b96c-f558-4070-bf25-92c1f761a5fa" name="Changes" comment="version 2.0">
+      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/init.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/database.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/filters/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/filters/curator_filter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/handlers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/handlers/admin/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/handlers/admin/manage_admins.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/handlers/admin/polls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/handlers/user/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/keyboards/for_admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/keyboards/for_back.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/keyboards/for_cancel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/keyboards/for_categories.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/keyboards/for_choice.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/keyboards/for_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/keyboards/for_polls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/keyboards/for_transactions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/states/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/states/admin_states.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/states/user_states.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/whitelist.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0aadeea3-1d49-476b-bc78-05e5e8ddb2ba.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0aadeea3-1d49-476b-bc78-05e5e8ddb2ba/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/rectorscup.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/rectorscup.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv_data/deleted_transactions_27-09-2024_00:29:15.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv_data/deleted_transactions_27-09-2024_00:56:28.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv_data/deleted_transactions_27-09-2024_01:15:41.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv_data/deleted_transactions_27-09-2024_03:23:54.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv_data/transactions_27-09-2024_00:29:13.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv_data/transactions_27-09-2024_00:56:27.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv_data/transactions_27-09-2024_00:57:37.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv_data/transactions_27-09-2024_01:15:52.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv_data/transactions_27-09-2024_01:17:37.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv_data/transactions_27-09-2024_03:22:27.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv_data/transactions_27-09-2024_03:24:06.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv_data/users_27-09-2024_00:32:37.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv_data/users_27-09-2024_00:56:25.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv_data/users_27-09-2024_00:57:21.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv_data/users_27-09-2024_01:10:50.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv_data/users_27-09-2024_01:17:23.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv_data/users_27-09-2024_02:27:39.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv_data/users_27-09-2024_03:14:59.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv_data/users_27-09-2024_03:23:12.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv_data/users_27-09-2024_03:23:21.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_methods.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/back.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/user/back.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/categories.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/user/categories.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/choice.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/user/choice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/admin/data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/user/start.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/total.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/admin/total.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/transactions.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/user/transactions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/txt.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/messages.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keyboards/for_back.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/keyboards/for_cancel.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/keyboards/for_categories.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/keyboards/for_choice.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/keyboards/for_data.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/keyboards/for_transactions.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/methods.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pidors.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/whitelist.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +93,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Dockerfile" />
         <option value="Python Script" />
       </list>
     </option>
@@ -22,42 +101,65 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Bozhenkas&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:Bozhenkas/obzhora.git&quot;,
+    &quot;accountId&quot;: &quot;c1a896aa-c915-4ea9-b53d-373c37d29ef6&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2mbtQPbVcHDb5VLteqg4n6sjedt" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.bot (1).executor": "Run",
-    "Python.bot.executor": "Run",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/bozhenkas/PycharmProjects/rectorscup",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.bot (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.bot.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ss_script.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.vk_script.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/bozhenkas/PycharmProjects/obzhora/src/handlers&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/handlers" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/utils" />
+      <recent name="$PROJECT_DIR$/src/database" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/old/handlers/user" />
+      <recent name="$PROJECT_DIR$/old/handlers/admin" />
+      <recent name="$PROJECT_DIR$/old" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.bot (1)">
-    <configuration name="bot (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.bot">
+    <configuration name="bot" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="rectorscup" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -71,7 +173,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bot.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/old/bot.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -103,7 +205,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="ss_script" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="rectorscup" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -112,12 +214,58 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/vk_script" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vk_script/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/old/ss_script.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="rectorscup" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/old/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="vk_script" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="rectorscup" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vk_script.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -128,17 +276,18 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.bot (1)" />
+        <item itemvalue="Python.ss_script" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.vk_script" />
         <item itemvalue="Python.bot" />
-        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-PY-241.15989.155" />
-        <option value="bundled-python-sdk-babbdf50b680-7c6932dee5e4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.15989.155" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-PY-243.22562.220" />
+        <option value="bundled-python-sdk-0fc6c617c4bd-9a18a617cbe4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.22562.220" />
       </set>
     </attachedChunks>
   </component>
@@ -151,6 +300,30 @@
       <option name="presentableId" value="Default" />
       <updated>1727357087411</updated>
       <workItem from="1727357088997" duration="15322000" />
+      <workItem from="1727401670502" duration="1376000" />
+      <workItem from="1727468736598" duration="19870000" />
+      <workItem from="1727649619036" duration="563000" />
+      <workItem from="1727650362509" duration="1834000" />
+      <workItem from="1733311332824" duration="1430000" />
+      <workItem from="1737309759073" duration="307000" />
+      <workItem from="1741017085260" duration="2282000" />
+      <workItem from="1741109621212" duration="4075000" />
+      <workItem from="1741157445717" duration="348000" />
+      <workItem from="1742659352355" duration="6736000" />
+      <workItem from="1743016498144" duration="2444000" />
+      <workItem from="1746834039987" duration="9000" />
+      <workItem from="1746972052997" duration="8000" />
+      <workItem from="1746976958330" duration="74000" />
+      <workItem from="1746994137242" duration="1954000" />
+      <workItem from="1747525284138" duration="1486000" />
+      <workItem from="1749065054509" duration="192000" />
+      <workItem from="1750436217765" duration="2912000" />
+      <workItem from="1751815510456" duration="1215000" />
+      <workItem from="1755685781814" duration="750000" />
+      <workItem from="1755798187300" duration="609000" />
+      <workItem from="1759533933799" duration="17034000" />
+      <workItem from="1760374552428" duration="6000" />
+      <workItem from="1760374568412" duration="15807000" />
     </task>
     <task id="LOCAL-00001" summary="version 2.0">
       <option name="closed" value="true" />
@@ -171,7 +344,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -182,8 +361,12 @@
     <option name="LAST_COMMIT_MESSAGE" value="version 2.0" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/obzhora$test.coverage" NAME="test Coverage Results" MODIFIED="1741116316732" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/rectorscup$bot__1_.coverage" NAME="bot (1) Coverage Results" MODIFIED="1727385320051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/rectorscup$bot.coverage" NAME="bot Coverage Results" MODIFIED="1727373553988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/obzhora/obzhora" />
+    <SUITE FILE_PATH="coverage/obzhora$ss_script.coverage" NAME="ss_script Coverage Results" MODIFIED="1741157451360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/obzhora$vk_script.coverage" NAME="vk_script Coverage Results" MODIFIED="1727624417473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/rectorscup$main.coverage" NAME="main Coverage Results" MODIFIED="1727370065940" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vk_script" />
+    <SUITE FILE_PATH="coverage/rectorscup$bot.coverage" NAME="bot Coverage Results" MODIFIED="1727373553988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/obzhora/obzhora" />
+    <SUITE FILE_PATH="coverage/obzhora$bot__1_.coverage" NAME="bot (1) Coverage Results" MODIFIED="1742675623516" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

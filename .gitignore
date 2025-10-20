@@ -1,2 +1,30 @@
-/.venv/
-/config.py
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+.venv/
+env/
+venv/
+
+# Secrets
+.env
+
+# Logs, temp, cache
+cache/
+*.log
+*.csv
+*.jsonl
+
+# Сгенерированные билеты
+src/bot/tickets/tickets/*
+
+# Temporary scripts
+temp.py
+
+# IDE files
+.idea/
+
+# macOS system files
+.DS_Store

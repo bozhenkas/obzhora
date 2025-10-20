@@ -1,0 +1,8 @@
+aiogram
+pydantic
+pydantic-settings
+asyncpg
+pytz
+httpx
+PyYAML
+redis
