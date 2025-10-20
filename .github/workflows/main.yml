@@ -1,0 +1,45 @@
+# Имя рабочего процесса
+name: Deploy obzhora-bot
+
+# Триггер: запуск при пуше в ветку 'main'
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    name: Deploy to Server
+    # Запускаем на последней версии Ubuntu
+    runs-on: ubuntu-latest
+
+    steps:
+      # Шаг 1: Клонирование репозитория в виртуальную машину Actions
+      - name: Checkout repository
+        uses: actions/checkout@v4 # Используем последнюю версию
+
+      # Шаг 2: Развертывание на вашем сервере по SSH
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.3 # Более новая версия
+        with:
+          # Данные для подключения (их нужно добавить в секреты GitHub)
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.PRIVATE_KEY }}
+          port: ${{ secrets.PORT }} # Порт тоже лучше хранить в секретах
+          
+          # Скрипт, который будет выполнен на вашем сервере
+          script: |
+            # Переходим в директорию с проектом на сервере
+            # !!! ВАЖНО: Замените '~/obzhora' на ваш реальный путь к проекту на сервере
+            cd ~/obzhora
+            
+            # 1. Получаем последние изменения из ветки main
+            git pull origin main
+            
+            # 2. Пересобираем и перезапускаем все сервисы в фоновом режиме.
+            # Docker Compose автоматически остановит и удалит старые контейнеры перед созданием новых.
+            # Флаг --build заставит пересобрать образ 'bot' с новым кодом.
+            docker-compose up --build -d
+            
+            # 3. (Опционально) Очищаем старые, неиспользуемые образы Docker, чтобы освободить место
+            docker image prune -f
