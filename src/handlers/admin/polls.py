@@ -1,3 +1,5 @@
+# src/handlers/admin/polls.py
+
 import yaml
 import os
 from aiogram import Router, F, types
@@ -35,7 +37,6 @@ async def _get_poll_page_content(polls_data: List[Dict[str, Any]], page: int) ->
     total_pages = len(polls_data)
     text = ""
 
-    # --- ОБНОВЛЕННАЯ ЛОГИКА ВЫБОРА ШАБЛОНА ---
     if current_poll.get("error") == "tech_account_not_voted":
         text_template = MESSAGES['poll_tech_account_error_text']
         text = text_template.format(
@@ -44,7 +45,6 @@ async def _get_poll_page_content(polls_data: List[Dict[str, Any]], page: int) ->
             total_pages=total_pages
         )
     else:
-        # Выбираем шаблон текста для успешного случая
         if current_poll.get("students_non_voters_links") == "отсутствуют.":
             text_template = MESSAGES['poll_no_students_text']
         else:
@@ -58,7 +58,6 @@ async def _get_poll_page_content(polls_data: List[Dict[str, Any]], page: int) ->
             curators_non_voters_count=current_poll.get("curators_non_voters_count", 0),
             students_non_voters_links=current_poll.get("students_non_voters_links", "нет данных")
         )
-    # --- КОНЕЦ ОБНОВЛЕННОЙ ЛОГИКИ ---
 
     keyboard = get_polls_pagination_kb(polls_data, page)
     return text, keyboard
@@ -101,20 +100,39 @@ async def process_unknown_department(message: types.Message):
     await message.answer("Пожалуйста, выберите действительный отдел с помощью кнопок.")
 
 
+# --- НАЧАЛО ИЗМЕНЕНИЙ ---
 @router.callback_query(PollsCallback.filter(F.action.in_(["prev", "next"])), PollsForm.viewing_polls)
 async def navigate_polls_callback(callback: types.CallbackQuery, callback_data: PollsCallback, state: FSMContext):
+    # 1. Отвечаем на коллбэк СРАЗУ, чтобы убрать "загрузку" на кнопке
+    await callback.answer()
+
     fsm_data = await state.get_data()
     polls_data = fsm_data.get("polls", [])
 
     if not polls_data:
-        await callback.answer("Данные не найдены, попробуйте заново.", show_alert=True)
+        await callback.message.edit_text("Ошибка: данные для пагинации не найдены. Попробуйте заново.")
         return
 
     page = callback_data.page
+
+    # Защита от выхода за пределы списка, если что-то пошло не так
+    if not 0 <= page < len(polls_data):
+        await callback.message.edit_text("Ошибка: неверный номер страницы. Попробуйте заново.")
+        return
+
     text, keyboard = await _get_poll_page_content(polls_data, page)
 
-    await callback.message.edit_text(text, reply_markup=keyboard)
-    await callback.answer()
+    # 2. Оборачиваем редактирование сообщения в try-except, чтобы бот не падал
+    try:
+        await callback.message.edit_text(text, reply_markup=keyboard)
+    except Exception as e:
+        # Эта ошибка может возникнуть, если сообщение слишком старое или было удалено
+        print(f"Не удалось отредактировать сообщение: {e}")
+        # Можно опционально уведомить пользователя в новом сообщении
+        await callback.message.answer("Не удалось обновить старое сообщение. Попробуйте вызвать команду заново.")
+
+
+# --- КОНЕЦ ИЗМЕНЕНИЙ ---
 
 
 @router.callback_query(PollsCallback.filter(F.action == "close"), PollsForm.viewing_polls)
