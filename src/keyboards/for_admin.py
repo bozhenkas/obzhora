@@ -14,7 +14,7 @@ def get_add_admin_kb() -> InlineKeyboardMarkup:
     Создает инлайн-клавиатуру для добавления администратора.
     Читает файл whitelist.txt для получения актуального счетчика.
     """
-    whitelist_path = 'whitelist.txt'  # Путь относительно корня /app в Docker
+    whitelist_path = 'src/whitelist.txt'
     count = 0
     try:
         with open(whitelist_path, 'r') as f:

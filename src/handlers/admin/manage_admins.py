@@ -5,7 +5,7 @@ from filters.curator_filter import CuratorFilter
 from keyboards.for_admin import get_add_admin_kb, AddAdminCallback
 
 router = Router()
-WHITELIST_PATH = 'whitelist.txt'
+WHITELIST_PATH = 'src/whitelist.txt'
 
 
 @router.message(
