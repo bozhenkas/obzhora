@@ -1,6 +1,8 @@
+# src/main.py
+
 import asyncio
 import logging
-from aiogram import Bot, Dispatcher
+from aiogram import Bot, Dispatcher, Router, F  # <-- Добавили Router и F
 from aiogram.client.default import DefaultBotProperties
 from aiogram.fsm.storage.redis import RedisStorage
 from contextlib import asynccontextmanager
@@ -27,7 +29,12 @@ async def main():
 
     dp = Dispatcher(storage=storage)
 
-    dp.include_routers(
+    private_router = Router(name="private_commands")
+
+    private_router.message.filter(F.chat.type == "private")
+    private_router.callback_query.filter(F.chat.type == "private")
+
+    private_router.include_routers(
         start.router,
         choice.router,
         back.router,
@@ -35,8 +42,12 @@ async def main():
         transactions.router,
         total.router,
         data.router,
-        polls.router,
-        manage_admins.router,
+        polls.router
+    )
+
+    dp.include_routers(
+        private_router,
+        manage_admins.router
     )
 
     await bot.delete_webhook(drop_pending_updates=True)
