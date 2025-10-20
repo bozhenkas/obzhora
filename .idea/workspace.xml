@@ -5,85 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4759b96c-f558-4070-bf25-92c1f761a5fa" name="Changes" comment="version 2.0">
-      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/init.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/database.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/filters/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/filters/curator_filter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/handlers/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/handlers/admin/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/handlers/admin/manage_admins.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/handlers/admin/polls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/handlers/user/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/keyboards/for_admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/keyboards/for_back.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/keyboards/for_cancel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/keyboards/for_categories.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/keyboards/for_choice.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/keyboards/for_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/keyboards/for_polls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/keyboards/for_transactions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/states/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/states/admin_states.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/states/user_states.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/whitelist.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0aadeea3-1d49-476b-bc78-05e5e8ddb2ba.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0aadeea3-1d49-476b-bc78-05e5e8ddb2ba/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/rectorscup.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/rectorscup.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv_data/deleted_transactions_27-09-2024_00:29:15.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv_data/deleted_transactions_27-09-2024_00:56:28.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv_data/deleted_transactions_27-09-2024_01:15:41.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv_data/deleted_transactions_27-09-2024_03:23:54.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv_data/transactions_27-09-2024_00:29:13.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv_data/transactions_27-09-2024_00:56:27.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv_data/transactions_27-09-2024_00:57:37.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv_data/transactions_27-09-2024_01:15:52.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv_data/transactions_27-09-2024_01:17:37.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv_data/transactions_27-09-2024_03:22:27.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv_data/transactions_27-09-2024_03:24:06.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv_data/users_27-09-2024_00:32:37.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv_data/users_27-09-2024_00:56:25.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv_data/users_27-09-2024_00:57:21.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv_data/users_27-09-2024_01:10:50.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv_data/users_27-09-2024_01:17:23.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv_data/users_27-09-2024_02:27:39.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv_data/users_27-09-2024_03:14:59.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv_data/users_27-09-2024_03:23:12.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv_data/users_27-09-2024_03:23:21.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db_methods.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/back.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/user/back.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/categories.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/user/categories.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/choice.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/user/choice.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/admin/data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/user/start.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/total.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/admin/total.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/transactions.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/user/transactions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/txt.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/messages.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/keyboards/for_back.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keyboards/for_cancel.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keyboards/for_categories.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keyboards/for_choice.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keyboards/for_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keyboards/for_transactions.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/methods.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pidors.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/whitelist.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -323,7 +246,7 @@
       <workItem from="1755798187300" duration="609000" />
       <workItem from="1759533933799" duration="17034000" />
       <workItem from="1760374552428" duration="6000" />
-      <workItem from="1760374568412" duration="15807000" />
+      <workItem from="1760374568412" duration="17731000" />
     </task>
     <task id="LOCAL-00001" summary="version 2.0">
       <option name="closed" value="true" />
