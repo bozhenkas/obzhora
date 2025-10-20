@@ -1,12 +1,10 @@
-# src/handlers/admin/polls.py
-import logging  # <-- Добавлен импорт
+import logging
 import yaml
 import os
 from aiogram import Router, F, types
 from aiogram.filters import Command
 from aiogram.fsm.context import FSMContext
 from typing import List, Dict, Any
-
 from utils import get_non_voters_from_vk
 from keyboards.for_polls import get_departments_kb, get_polls_pagination_kb, PollsCallback
 from keyboards.for_choice import get_choice_kb
@@ -15,7 +13,6 @@ from states import PollsForm
 
 router = Router()
 
-# ... (код загрузки MESSAGES остается без изменений) ...
 dir_path = os.path.dirname(os.path.realpath(__file__))
 yaml_path = os.path.join(dir_path, '..', 'messages.yaml')
 with open(yaml_path, 'r', encoding='utf-8') as file:
@@ -28,8 +25,6 @@ ACTIONS = {
 
 
 async def _get_poll_page_content(polls_data: List[Dict[str, Any]], page: int) -> tuple[str, types.InlineKeyboardMarkup]:
-    """Формирует текст и клавиатуру для указанной страницы."""
-    # ... (код этой функции остается без изменений) ...
     current_poll = polls_data[page]
     total_pages = len(polls_data)
     text = ""
@@ -54,7 +49,6 @@ async def _get_poll_page_content(polls_data: List[Dict[str, Any]], page: int) ->
 
 @router.message(Command("polls"), CuratorFilter())
 async def cmd_polls(message: types.Message, state: FSMContext):
-    # ... (код этой функции остается без изменений) ...
     await state.clear()
     await state.set_state(PollsForm.waiting_for_department)
     await message.answer("Выберите отдел:", reply_markup=get_departments_kb())
@@ -78,7 +72,6 @@ async def process_department_selection(message: types.Message, state: FSMContext
     await msg.edit_text(text, reply_markup=keyboard)
 
 
-# ... (обработчики кнопок Назад и неизвестного отдела остаются без изменений) ...
 @router.message(PollsForm.waiting_for_department, F.text == '⬅️ Назад')
 async def process_back_from_polls_choice(message: types.Message, state: FSMContext):
     await state.clear()
@@ -90,13 +83,11 @@ async def process_unknown_department(message: types.Message):
     await message.answer("Пожалуйста, выберите действительный отдел с помощью кнопок.")
 
 
-# --- НАЧАЛО ИЗМЕНЕНИЙ С ЛОГИРОВАНИЕМ ---
-@router.callback_query(PollsCallback.filter(F.action.in_(["prev", "next"])), PollsForm.viewing_polls)
+@router.callback_query(PollsCallback.filter(F.action.in_(["prev", "next"])))
 async def navigate_polls_callback(callback: types.CallbackQuery, callback_data: PollsCallback, state: FSMContext):
-    logging.info("--- СРАБОТАЛ ХЭНДЛЕР ПАГИНАЦИИ ---")
+    logging.info("--- СРАБОТАЛ ХЭНДЛЕР ПАГИНАЦИИ (БЕЗ ПРОВЕРКИ СОСТОЯНИЯ) ---")
     logging.info(f"Получен callback: action='{callback_data.action}', page='{callback_data.page}'")
 
-    # Немедленно отвечаем Telegram, чтобы убрать "часики"
     await callback.answer()
 
     fsm_data = await state.get_data()
@@ -130,8 +121,9 @@ async def navigate_polls_callback(callback: types.CallbackQuery, callback_data: 
     logging.info("--- КОНЕЦ ОБРАБОТКИ ПАГИНАЦИИ ---\n")
 
 
-@router.callback_query(PollsCallback.filter(F.action == "close"), PollsForm.viewing_polls)
+@router.callback_query(PollsCallback.filter(F.action == "close"))
 async def close_polls_view_callback(callback: types.CallbackQuery, state: FSMContext):
+    logging.info("--- СРАБОТАЛ ХЭНДЛЕР ЗАКРЫТИЯ (БЕЗ ПРОВЕРКИ СОСТОЯНИЯ) ---")
+    await callback.answer("Закрыто.")
     await callback.message.delete()
     await state.clear()
-    await callback.answer("Закрыто.")

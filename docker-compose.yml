@@ -37,9 +37,8 @@ services:
       POSTGRES_HOST: postgres
       REDIS_HOST: redis
     volumes:
+      - ./src:/app/src
       - ./csv_data:/app/csv_data
-      - ./pidors.txt:/app/src/pidors.txt
-      - ./whitelist.txt:/app/src/whitelist.txt
     restart: unless-stopped
 
 volumes:
