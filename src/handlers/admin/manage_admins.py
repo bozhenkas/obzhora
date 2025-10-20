@@ -46,7 +46,6 @@ async def callback_add_admin(callback: types.CallbackQuery):
         # Добавляем нового админа и перезаписываем файл
         admin_ids.add(user_id)
         with open(WHITELIST_PATH, 'w') as f:
-            # Сортируем для красоты и порядка в файле
             for admin_id in sorted(list(admin_ids)):
                 f.write(f"{admin_id}\n")
 
